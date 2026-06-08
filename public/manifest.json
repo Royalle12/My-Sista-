@@ -1,0 +1,44 @@
+{
+  "name": "My Sista",
+  "short_name": "MySista",
+  "description": "Your personal wellness companion — content, community, and care.",
+  "theme_color": "#6B3FA0",
+  "background_color": "#FAFAFA",
+  "display": "standalone",
+  "orientation": "portrait",
+  "scope": "/",
+  "start_url": "/",
+  "lang": "en-ZA",
+  "categories": ["health", "lifestyle", "wellness"],
+  "icons": [
+    {
+      "src": "icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Daily Check-In",
+      "short_name": "Check-In",
+      "description": "Log your daily wellness",
+      "url": "/check-in",
+      "icons": [{ "src": "icons/icon-192x192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "My Feed",
+      "short_name": "Feed",
+      "description": "Personalised wellness content",
+      "url": "/feed",
+      "icons": [{ "src": "icons/icon-192x192.png", "sizes": "192x192" }]
+    }
+  ],
+  "screenshots": []
+}
