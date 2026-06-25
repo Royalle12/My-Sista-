@@ -19,7 +19,7 @@
 
 export const SUBSCRIPTION_TIERS = {
   sista: {
-    name:         'Sista',
+    name:         'Sista Premium',
     monthlyZAR:   99,
     annualZAR:    990,   // 10 months price for 12 months
     monthlyAmountCents: 9900,
@@ -33,7 +33,7 @@ export const SUBSCRIPTION_TIERS = {
     ],
   },
   sista_plus: {
-    name:         'Sista+',
+    name:         'Sista Gold',
     monthlyZAR:   199,
     annualZAR:    1990,
     monthlyAmountCents: 19900,
@@ -41,26 +41,11 @@ export const SUBSCRIPTION_TIERS = {
     color:        'secondary',
     popular:      true,
     features: [
-      'Everything in Sista',
+      'Everything in Sista Premium',
       'Premium & exclusive content',
       'Live wellness sessions',
       'Direct messaging (Phase 2)',
       '5 marketplace listings (Phase 3)',
-    ],
-  },
-  sista_pro: {
-    name:         'Sista Pro',
-    monthlyZAR:   349,
-    annualZAR:    3490,
-    monthlyAmountCents: 34900,
-    annualAmountCents:  349000,
-    color:        'primary',
-    features: [
-      'Everything in Sista+',
-      'Unlimited marketplace listings',
-      'Priority support',
-      '15% Happy Splurge discount',
-      'Early feature access',
     ],
   },
 };
@@ -121,7 +106,7 @@ export async function initiateCheckout(tier, billingCycle = 'monthly') {
 
 // ─── Feature Access Helpers ───────────────────────────────────────────────────
 
-const TIER_LEVELS = { free: 0, sista: 1, sista_plus: 2, sista_pro: 3 };
+const TIER_LEVELS = { free: 0, sista: 1, sista_plus: 2 };
 
 /**
  * Check if a tier has access to a required tier's features.

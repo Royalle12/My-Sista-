@@ -8,11 +8,14 @@ create table if not exists public.profiles (
   id                      uuid references auth.users on delete cascade primary key,
   display_name            text,
   avatar_url              text,
+  pronouns                text,
+  province                text,
+  language_preference     text not null default 'en',
   age_range               text check (age_range in ('25-30','31-35','36-40','41-45')),
   wellness_goals          text[],   -- e.g. ['weight_management','stress','hormonal_health']
   content_preferences     text[],   -- e.g. ['nutrition','fitness','mental_health']
   subscription_tier       text not null default 'free'
-                            check (subscription_tier in ('free','sista','sista_plus','sista_pro')),
+                            check (subscription_tier in ('free','sista','sista_plus')),
   subscription_expires_at timestamptz,
   happy_splurge_account_id text,
   sista_credits           integer not null default 0,

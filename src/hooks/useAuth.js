@@ -12,7 +12,7 @@ import { useAuthStore } from '../store/authStore.js';
 export function useAuth() {
   const navigate  = useNavigate();
   const store     = useAuthStore();
-  const { user, session, profile, loading, setUser, setProfile, logout: clearStore } = store;
+  const { user, session, profile, loading, setUser, setProfile, logout: clearStore, isGuest, setGuestSession } = store;
 
   // ─── Register with email + password ─────────────────────────────────────
   const register = useCallback(async ({ email, password, displayName }) => {
@@ -57,6 +57,13 @@ export function useAuth() {
     if (error) throw error;
   }, []);
 
+  // ─── Guest Access ────────────────────────────────────────────────────────
+  const loginAsGuest = useCallback(() => {
+    setGuestSession();
+    navigate('/feed', { replace: true });
+    toast.success('Logged in as Guest 🌸');
+  }, [setGuestSession, navigate]);
+
   // ─── Logout ──────────────────────────────────────────────────────────────
   const logout = useCallback(async () => {
     await supabase.auth.signOut();
@@ -67,7 +74,7 @@ export function useAuth() {
 
   // ─── Refresh profile from DB ──────────────────────────────────────────────
   const refreshProfile = useCallback(async () => {
-    if (!user?.id) return;
+    if (!user?.id || isGuest) return;
     try {
       const prof = await getProfile(user.id);
       setProfile(prof);
@@ -75,14 +82,18 @@ export function useAuth() {
     } catch (err) {
       console.error('[useAuth] refreshProfile error:', err);
     }
-  }, [user?.id, setProfile]);
+  }, [user?.id, isGuest, setProfile]);
 
   // ─── Post-auth routing ────────────────────────────────────────────────────
   const routeAfterAuth = useCallback((userProfile) => {
+    if (isGuest) {
+      navigate('/feed', { replace: true });
+      return;
+    }
     const hasOnboarded =
       userProfile?.display_name && userProfile?.wellness_goals?.length > 0;
     navigate(hasOnboarded ? '/feed' : '/onboarding', { replace: true });
-  }, [navigate]);
+  }, [isGuest, navigate]);
 
   return {
     // State
@@ -90,6 +101,7 @@ export function useAuth() {
     session,
     profile,
     loading,
+    isGuest,
     isAuthenticated: !!user,
     isAdmin: store.isAdmin?.(),
     tier: store.tier?.(),
@@ -98,6 +110,7 @@ export function useAuth() {
     register,
     login,
     loginWithGoogle,
+    loginAsGuest,
     logout,
     refreshProfile,
     routeAfterAuth,

@@ -1,14 +1,9 @@
 /* ============================================================
    MY SISTA — Global Stylesheet
-   Tailwind directives + CSS custom properties + base styles
+   @import statements MUST come before @tailwind directives
    ============================================================ */
 
-/* 1. TAILWIND DIRECTIVES */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-/* 2. FONTSOURCE — self-hosted, works offline (PWA requirement) */
+/* 1. FONTSOURCE — self-hosted, works offline (PWA requirement) */
 /* DM Sans weights: 300, 400, 500, 600 */
 @import '@fontsource/dm-sans/300.css';
 @import '@fontsource/dm-sans/400.css';
@@ -22,19 +17,22 @@
 @import '@fontsource/playfair-display/600-italic.css';
 @import '@fontsource/playfair-display/700.css';
 
-/* Google Fonts CDN — fallback for browsers that block self-hosted fonts */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap');
+/* 2. TAILWIND DIRECTIVES — must come AFTER @import statements */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-/* 3. CSS CUSTOM PROPERTIES (brand tokens) */
+/* 3. CSS CUSTOM PROPERTIES — aligned to brand palette */
 :root {
-  /* Colours */
-  --color-primary:    #6B3FA0;
-  --color-secondary:  #C2185B;
-  --color-soft:       #F3EEF9;
-  --color-blush:      #FCE4EC;
-  --color-dark:       #212121;
-  --color-mid:        #757575;
-  --color-surface:    #FAFAFA;
+  /* ── Brand colours (match tailwind.config.js) ───────────────────────── */
+  --color-primary:    #4A5342;   /* Deep forest green */
+  --color-secondary:  #F8E0DD;   /* Blush pink */
+  --color-soft:       #F0F0E8;   /* Warm cream */
+  --color-blush:      #F8E0DD;   /* Same as secondary */
+  --color-dark:       #2C3228;   /* Deep green-black */
+  --color-mid:        #7A8070;   /* Muted sage */
+  --color-surface:    #FAFAF5;   /* Near-white cream */
+  --color-cream:      #F0F0E8;
 
   /* Typography */
   --font-display: 'Playfair Display', Georgia, serif;
@@ -84,7 +82,7 @@
   }
 
   a:hover {
-    color: var(--color-secondary);
+    color: var(--color-dark);
   }
 
   img, video {
@@ -109,7 +107,7 @@
     border-radius: 4px;
   }
 
-  /* Custom scrollbar */
+  /* Custom scrollbar — sage/cream brand feel */
   ::-webkit-scrollbar {
     width: 6px;
     height: 6px;
@@ -118,7 +116,7 @@
     background: var(--color-soft);
   }
   ::-webkit-scrollbar-thumb {
-    background: #C9ABEB;
+    background: #A2A89B;
     border-radius: 3px;
   }
   ::-webkit-scrollbar-thumb:hover {
@@ -128,7 +126,8 @@
 
 /* 5. COMPONENT UTILITIES */
 @layer components {
-  /* ---- Buttons ---- */
+
+  /* ── Buttons ─────────────────────────────────────────────────────────── */
   .btn {
     @apply inline-flex items-center justify-center gap-2 font-body font-medium
            rounded-xl px-5 py-2.5 text-sm transition-all duration-200
@@ -142,8 +141,8 @@
   }
 
   .btn-secondary {
-    @apply btn bg-blush text-secondary border border-secondary/20
-           hover:bg-secondary hover:text-white;
+    @apply btn bg-secondary text-dark border border-secondary-deep/30
+           hover:bg-secondary-deep;
   }
 
   .btn-outline {
@@ -163,7 +162,7 @@
     @apply px-3 py-1.5 text-xs rounded-lg;
   }
 
-  /* ---- Cards ---- */
+  /* ── Cards ───────────────────────────────────────────────────────────── */
   .card {
     @apply bg-surface rounded-2xl shadow-soft border border-primary/5
            transition-all duration-200;
@@ -173,7 +172,7 @@
     @apply card hover:shadow-card hover:-translate-y-1;
   }
 
-  /* ---- Form Elements ---- */
+  /* ── Form Elements ───────────────────────────────────────────────────── */
   .input {
     @apply w-full px-4 py-3 rounded-xl border border-primary/20 bg-white
            font-body text-dark placeholder:text-mid
@@ -185,7 +184,7 @@
     @apply block text-sm font-medium text-dark mb-1.5;
   }
 
-  /* ---- Badges ---- */
+  /* ── Badges ──────────────────────────────────────────────────────────── */
   .badge {
     @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-2xs font-medium;
   }
@@ -195,14 +194,14 @@
   }
 
   .badge-secondary {
-    @apply badge bg-blush text-secondary;
+    @apply badge bg-secondary text-dark;
   }
 
   .badge-premium {
     @apply badge bg-gradient-brand text-white;
   }
 
-  /* ---- Page Layout ---- */
+  /* ── Page Layout ─────────────────────────────────────────────────────── */
   .page-wrapper {
     @apply min-h-screen pt-[var(--nav-height)] pb-[var(--bottom-nav-height)]
            md:pb-0;
@@ -212,18 +211,18 @@
     @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
   }
 
-  /* ---- Skeleton Loader ---- */
+  /* ── Skeleton Loader ─────────────────────────────────────────────────── */
   .skeleton {
-    @apply bg-gradient-to-r from-soft via-blush/40 to-soft
+    @apply bg-gradient-to-r from-primary-50 via-secondary-100/40 to-primary-50
            bg-[length:200%_100%] animate-shimmer rounded-lg;
   }
 
-  /* ---- Gradient Text ---- */
+  /* ── Gradient Text ───────────────────────────────────────────────────── */
   .text-gradient {
     @apply bg-gradient-brand bg-clip-text text-transparent;
   }
 
-  /* ---- Section heading ---- */
+  /* ── Section headings ────────────────────────────────────────────────── */
   .section-title {
     @apply font-display text-2xl md:text-3xl font-semibold text-dark;
   }
@@ -231,6 +230,12 @@
   .section-subtitle {
     @apply font-body text-mid text-base mt-2;
   }
+
+  /* ── Colour shorthand helpers ────────────────────────────────────────── */
+  .bg-soft   { background-color: #F0F0E8; }
+  .bg-blush  { background-color: #F8E0DD; }
+
+  .text-secondary-200 { color: #F8E0DD; }
 }
 
 /* 6. UTILITY OVERRIDES */
@@ -246,4 +251,11 @@
   .safe-top {
     padding-top: env(safe-area-inset-top);
   }
+
+  /* Extra font-size utilities */
+  .text-3xs {
+    font-size: 0.5rem;    /* 8px */
+    line-height: 0.75rem;
+  }
+  /* text-2xs is defined in tailwind.config.js (0.625rem / 1rem) */
 }

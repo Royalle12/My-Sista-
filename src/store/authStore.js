@@ -15,14 +15,36 @@ export const useAuthStore = create(
       profile:     null,   // public.profiles row
       loading:     true,   // initial auth check in progress
       initialized: false,  // onAuthStateChange has fired at least once
+      isGuest:     false,  // Flag for mock guest session
 
       // ─── Actions ───────────────────────────────────────────────────────────
       setUser: (user, session) =>
-        set({ user, session, loading: false, initialized: true }),
+        set({ user, session, loading: false, initialized: true, isGuest: false }),
 
       setProfile: (profile) => set({ profile }),
 
       setLoading: (loading) => set({ loading }),
+
+      setGuestSession: () =>
+        set({
+          user: {
+            id: 'guest-sista',
+            email: 'guest@mysista.co.za',
+            user_metadata: { display_name: 'Guest Sista' },
+          },
+          session: { access_token: 'mock-guest-token' },
+          profile: {
+            id: 'guest-sista',
+            display_name: 'Guest Sista',
+            subscription_tier: 'free',
+            wellness_goals: ['general'],
+            onboarding_complete: true,
+            language_preference: 'en',
+          },
+          loading: false,
+          initialized: true,
+          isGuest: true,
+        }),
 
       logout: () =>
         set({
@@ -30,18 +52,21 @@ export const useAuthStore = create(
           session: null,
           profile: null,
           loading: false,
+          isGuest: false,
         }),
 
       // ─── Computed helpers ─────────────────────────────────────────────────
       isAuthenticated: () => !!get().user,
 
       isAdmin: () =>
-        get().user?.user_metadata?.role === 'admin' ||
-        get().user?.app_metadata?.role  === 'admin',
+        !get().isGuest &&
+        (get().user?.user_metadata?.role === 'admin' ||
+         get().user?.app_metadata?.role  === 'admin'),
 
       tier: () => get().profile?.subscription_tier ?? 'free',
 
       hasOnboarded: () =>
+        get().isGuest ||
         !!(get().profile?.display_name && get().profile?.wellness_goals?.length > 0),
     }),
     {
