@@ -26,6 +26,26 @@ import AdminGodmode       from './pages/AdminGodmode.jsx';
 import AdminSistas        from './pages/AdminSistas.jsx';
 import AdminGhostProfiles from './pages/AdminGhostProfiles.jsx';
 import AdminCoachConfig   from './pages/AdminCoachConfig.jsx';
+import WellnessHub        from './pages/WellnessHub.jsx';
+import ConditionDetail    from './pages/ConditionDetail.jsx';
+import Recipes            from './pages/Recipes.jsx';
+import RecipeDetail       from './pages/RecipeDetail.jsx';
+import LocalDirectory     from './pages/LocalDirectory.jsx';
+import BusinessDetail     from './pages/BusinessDetail.jsx';
+import DIYHub             from './pages/DIYHub.jsx';
+import DIYDetail          from './pages/DIYDetail.jsx';
+import AnonQuestions      from './pages/AnonQuestions.jsx';
+import Discover           from './pages/Discover.jsx';
+import CreatorPage        from './pages/CreatorPage.jsx';
+import CreateYourPage     from './pages/CreateYourPage.jsx';
+import AnonQuestionDetail from './pages/AnonQuestionDetail.jsx';
+import WeeklyReport       from './pages/WeeklyReport.jsx';
+import CreatorVerification from './pages/CreatorVerification.jsx';
+import CreatorAnalytics   from './pages/CreatorAnalytics.jsx';
+import NotificationSettings from './pages/NotificationSettings.jsx';
+import AffiliateDashboard from './pages/AffiliateDashboard.jsx';
+import WellnessPlans      from './pages/WellnessPlans.jsx';
+import ActivePlan         from './pages/ActivePlan.jsx';
 
 // ─── Route Guards ─────────────────────────────────────────────────────────────
 
@@ -135,6 +155,166 @@ export default function App() {
         element={
           <ProtectedRoute>
             <SistaCoach />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/wellness"
+        element={
+          <ProtectedRoute>
+            <WellnessHub />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/wellness/:slug"
+        element={
+          <ProtectedRoute>
+            <ConditionDetail />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/recipes"
+        element={
+          <ProtectedRoute>
+            <Recipes />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/recipes/:id"
+        element={
+          <ProtectedRoute>
+            <RecipeDetail />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/directory"
+        element={
+          <ProtectedRoute>
+            <LocalDirectory />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/directory/:id"
+        element={
+          <ProtectedRoute>
+            <BusinessDetail />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/diy"
+        element={
+          <ProtectedRoute>
+            <DIYHub />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/diy/:id"
+        element={
+          <ProtectedRoute>
+            <DIYDetail />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/community/anon"
+        element={
+          <ProtectedRoute>
+            <AnonQuestions />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/community/anon/:id"
+        element={
+          <ProtectedRoute>
+            <AnonQuestionDetail />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/discover"
+        element={
+          <ProtectedRoute>
+            <Discover />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/c/:page_name"
+        element={
+          <ProtectedRoute>
+            <CreatorPage />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/create-your-page"
+        element={
+          <ProtectedRoute>
+            <CreateYourPage />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/report"
+        element={
+          <ProtectedRoute>
+            <WeeklyReport />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/creator/verify"
+        element={
+          <ProtectedRoute>
+            <CreatorVerification />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/creator/analytics"
+        element={
+          <ProtectedRoute>
+            <CreatorAnalytics />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/settings/notifications"
+        element={
+          <ProtectedRoute>
+            <NotificationSettings />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/affiliate"
+        element={
+          <ProtectedRoute>
+            <AffiliateDashboard />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/wellness-plans"
+        element={
+          <ProtectedRoute>
+            <WellnessPlans />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/wellness-plans/:id"
+        element={
+          <ProtectedRoute>
+            <ActivePlan />
           </ProtectedRoute>
         }
       />

@@ -38,6 +38,8 @@ export default defineConfig({
         ],
       },
       workbox: {
+        skipWaiting: true,
+        clientsClaim: true,
         // Fix 4: exclude /admin from SW precache — admin is privileged, never serve stale
         globIgnores: ['**/admin*'],
 

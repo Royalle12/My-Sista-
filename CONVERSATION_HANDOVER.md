@@ -98,14 +98,21 @@ This file is a living document that tracks completed work, technical decisions, 
 
 ## 📅 Remaining Tasks Checklist
 
-- [x] **TASK 007**: Admin CMS & Dashboard (`Admin.jsx`)
-  - Admin article publishing (create/edit/publish articles)
-  - Happy Splurge product management (create/edit products)
-  - Article ↔ Product linking manager
-  - Admin-role gated route (already in `App.jsx` via `AdminRoute`)
-- [x] **Screens 4–8**: Implementation of Business Dashboard and Admin Pages
-- [x] **Route Wiring**: App.jsx integration of Safety, Coach, Business Upgrade, and Admin tools
+- [x] **TASK 008**: Full Build of 11 missing screens (Shot 1 & Shot 2)
+  - Discover.jsx, CreatorPage.jsx, CreateYourPage.jsx, AnonQuestionDetail.jsx, WeeklyReport.jsx, CreatorVerification.jsx, CreatorAnalytics.jsx, NotificationSettings.jsx, AffiliateDashboard.jsx, WellnessPlans.jsx, ActivePlan.jsx
+- [x] **Shot 1 & 2 Completed**: All 11 files and routes registered behind ProtectedRoute
+- [x] **Full TASK 008 Screen Count**: 20/20 screens completed across all batches
 - [x] **Build Verification**: Production bundler health check (passes successfully)
+- [x] **Next Task**: Missing Supabase tables migration + data seeding for the new tables (e.g. `creator_profiles`, `affiliate_links`, `wellness_plans`, `user_wellness_plans`)
+  - Migration `020_creator_affiliate_wellness.sql` created (284 lines)
+  - All 4 tables: `creator_profiles`, `affiliate_links`, `wellness_plans`, `user_wellness_plans`
+  - Full RLS policies and indexes on every table
+  - Seed data for 3 creator profiles (matching Discover.jsx / CreatorPage.jsx mocks) and 3 wellness plans (matching WellnessPlans.jsx / ActivePlan.jsx mocks)
+  - Build verification passed post-migration
+- [x] **TASK 009**: Seed Recipes into Supabase
+  - Migration `021_seed_recipes.sql` complete (ALTER TABLE and INSERT statements)
+  - Seeded all 50 recipes (IDs 51–100) with extended nutritional and media parameters
+- [ ] **Next Task**: Netlify production deploy and full QA
 
 ---
 
@@ -115,3 +122,4 @@ This file is a living document that tracks completed work, technical decisions, 
 - **Vite Warnings**: The "supabase.js dynamically imported but also statically imported" and "chunk size > 500kB" warnings are cosmetic and non-breaking. They appear in every build.
 - **Guest Mode**: Guests have `isGuest: true` in Zustand store. All pages must check `isGuest` and fall back to LocalStorage operations instead of Supabase writes.
 - **Cycle phase + day**: Stored in `localStorage` under `mysista-cycle-phase` and `mysista-cycle-day` after Onboarding. Feed.jsx reads these directly.
+
