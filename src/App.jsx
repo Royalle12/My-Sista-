@@ -56,8 +56,41 @@ import ActivePlan         from './pages/ActivePlan.jsx';
 function ProtectedRoute({ children }) {
   const { user, loading, initialized } = useAuthStore();
 
-  // Still doing the initial session check — render nothing (avoids flash)
-  if (!initialized && loading) return null;
+  // Still doing the initial session check — show branded splash screen
+  if (!initialized && loading) return (
+    <div style={{
+      position: 'fixed',
+      inset: 0,
+      background: '#1a0a2e',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      zIndex: 9999
+    }}>
+      <div style={{
+        width: 80,
+        height: 80,
+        borderRadius: '50%',
+        background: '#6B3FA0',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginBottom: 24,
+        fontSize: 32,
+        color: 'white',
+        fontWeight: 'bold'
+      }}>MS</div>
+      <div style={{
+        width: 40,
+        height: 4,
+        borderRadius: 2,
+        background: '#6B3FA0',
+        animation: 'pulse 1.2s ease-in-out infinite'
+      }}/>
+      <style>{`@keyframes pulse { 0%,100%{opacity:.3}50%{opacity:1} }`}</style>
+    </div>
+  );
 
   if (!user) return <Navigate to="/auth" replace />;
 
