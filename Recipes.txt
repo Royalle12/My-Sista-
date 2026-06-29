@@ -1,0 +1,454 @@
+[
+  {
+    "id": 51,
+    "title": "Iron Boosting Beef & Lentil Winter Stew",
+    "category": "Periods",
+    "description": "Rich in iron and protein to support energy levels during menstruation.",
+    "prep_time": 15,
+    "cook_time": 90,
+    "servings": 4,
+    "ingredients": [
+      "500g lean beef cubes",
+      "1 cup brown lentils",
+      "2 carrots diced",
+      "1 onion chopped",
+      "2 cloves garlic",
+      "4 cups beef stock",
+      "1 tsp paprika",
+      "Salt and pepper"
+    ],
+    "instructions": [
+      "Brown beef in a pot.",
+      "Add onions and garlic and sauté.",
+      "Add remaining ingredients.",
+      "Simmer for 90 minutes.",
+      "Serve hot."
+    ]
+  },
+  {
+    "id": 52,
+    "title": "Warm Cinnamon Oat & Berry Breakfast Bowl",
+    "category": "Hormonal Balance",
+    "description": "Supports blood sugar stability and hormone health.",
+    "prep_time": 5,
+    "cook_time": 10,
+    "servings": 2,
+    "ingredients": [
+      "1 cup oats",
+      "2 cups almond milk",
+      "1 tsp cinnamon",
+      "1 cup mixed berries",
+      "1 tbsp flaxseed"
+    ],
+    "instructions": [
+      "Cook oats with almond milk.",
+      "Add cinnamon.",
+      "Top with berries and flaxseed.",
+      "Serve warm."
+    ]
+  },
+  {
+    "id": 53,
+    "title": "Collagen Chicken Bone Broth Soup",
+    "category": "Skin & Hair",
+    "description": "Nourishing broth rich in collagen-supporting nutrients.",
+    "prep_time": 20,
+    "cook_time": 180,
+    "servings": 6,
+    "ingredients": [
+      "1 whole chicken carcass",
+      "2 carrots",
+      "2 celery stalks",
+      "1 onion",
+      "3 litres water",
+      "Parsley"
+    ],
+    "instructions": [
+      "Combine all ingredients.",
+      "Simmer for 3 hours.",
+      "Strain broth.",
+      "Serve warm."
+    ]
+  },
+  {
+    "id": 54,
+    "title": "Creamy Pumpkin Sage Soup",
+    "category": "Stress Relief",
+    "description": "Comforting winter soup rich in magnesium and antioxidants.",
+    "prep_time": 15,
+    "cook_time": 40,
+    "servings": 4,
+    "ingredients": [
+      "500g pumpkin",
+      "1 onion",
+      "2 cups vegetable stock",
+      "1 tsp sage",
+      "100ml cream"
+    ],
+    "instructions": [
+      "Cook pumpkin and onion.",
+      "Add stock and simmer.",
+      "Blend smooth.",
+      "Stir in cream and sage."
+    ]
+  },
+  {
+    "id": 55,
+    "title": "Turmeric Salmon with Roasted Vegetables",
+    "category": "Perimenopause",
+    "description": "Omega-3 rich meal supporting hormonal transitions.",
+    "prep_time": 15,
+    "cook_time": 25,
+    "servings": 2,
+    "ingredients": [
+      "2 salmon fillets",
+      "1 tsp turmeric",
+      "1 zucchini",
+      "1 carrot",
+      "1 sweet potato",
+      "Olive oil"
+    ],
+    "instructions": [
+      "Season salmon with turmeric.",
+      "Roast vegetables.",
+      "Bake salmon for 15 minutes.",
+      "Serve together."
+    ]
+  },
+  {
+    "id": 56,
+    "title": "Phytoestrogen Lentil Shepherd's Pie",
+    "category": "Menopause",
+    "description": "Plant-based comfort food rich in fibre.",
+    "prep_time": 20,
+    "cook_time": 50,
+    "servings": 6,
+    "ingredients": [
+      "2 cups cooked lentils",
+      "1 onion",
+      "2 carrots",
+      "4 potatoes",
+      "Vegetable stock"
+    ],
+    "instructions": [
+      "Cook vegetables and lentils.",
+      "Prepare mashed potatoes.",
+      "Layer in baking dish.",
+      "Bake until golden."
+    ]
+  },
+  {
+    "id": 57,
+    "title": "Winter Wellness Chicken & Ginger Noodle Soup",
+    "category": "Wellbeing",
+    "description": "Immune-supportive soup perfect for cold days.",
+    "prep_time": 15,
+    "cook_time": 35,
+    "servings": 4,
+    "ingredients": [
+      "2 chicken breasts",
+      "1 thumb ginger",
+      "100g noodles",
+      "1 litre stock",
+      "Spring onions"
+    ],
+    "instructions": [
+      "Cook chicken in stock.",
+      "Add ginger and noodles.",
+      "Simmer until noodles are tender.",
+      "Garnish and serve."
+    ]
+  },
+  {
+    "id": 58,
+    "title": "Low Carb Cauliflower & Chicken Bake",
+    "category": "Weight Loss",
+    "description": "High protein and low carbohydrate winter dinner.",
+    "prep_time": 15,
+    "cook_time": 35,
+    "servings": 4,
+    "ingredients": [
+      "1 cauliflower",
+      "2 chicken breasts",
+      "100g Greek yogurt",
+      "1 tsp garlic powder",
+      "Cheese sprinkle"
+    ],
+    "instructions": [
+      "Steam cauliflower.",
+      "Cook chicken and shred.",
+      "Mix ingredients.",
+      "Bake until golden."
+    ]
+  },
+  {
+    "id": 59,
+    "title": "Mood Supporting Sweet Potato & Black Bean Chili",
+    "category": "Recovery & Depression Support",
+    "description": "Rich in fibre, complex carbs and plant protein.",
+    "prep_time": 15,
+    "cook_time": 45,
+    "servings": 6,
+    "ingredients": [
+      "2 sweet potatoes",
+      "2 cans black beans",
+      "1 onion",
+      "2 tomatoes",
+      "Chili spices"
+    ],
+    "instructions": [
+      "Cook onion and spices.",
+      "Add vegetables and beans.",
+      "Simmer 45 minutes.",
+      "Serve warm."
+    ]
+  },
+  {
+    "id": 60,
+    "title": "Dark Chocolate Walnut Energy Porridge",
+    "category": "Recovery & Depression Support",
+    "description": "Comforting breakfast rich in magnesium and healthy fats.",
+    "prep_time": 5,
+    "cook_time": 10,
+    "servings": 2,
+    "ingredients": [
+      "1 cup oats",
+      "2 cups milk",
+      "20g dark chocolate",
+      "2 tbsp walnuts",
+      "1 tsp honey"
+    ],
+    "instructions": [
+      "Cook oats.",
+      "Stir in chocolate.",
+      "Top with walnuts and honey.",
+      "Serve warm."
+    ]
+  }
+]
+[
+  {
+    "id": 61,
+    "title": "Spinach & Chickpea Iron Power Curry",
+    "category": "Periods",
+    "description": "Iron-rich vegetarian curry to support healthy energy levels.",
+    "prep_time": 15,
+    "cook_time": 35,
+    "servings": 4,
+    "ingredients": [
+      "2 cans chickpeas",
+      "4 cups spinach",
+      "1 onion",
+      "2 tomatoes",
+      "1 tbsp curry powder",
+      "1 cup coconut milk"
+    ],
+    "instructions": [
+      "Sauté onion until soft.",
+      "Add curry powder and tomatoes.",
+      "Stir in chickpeas and coconut milk.",
+      "Simmer 20 minutes.",
+      "Add spinach and cook until wilted."
+    ]
+  },
+  {
+    "id": 62,
+    "title": "Roasted Beetroot & Quinoa Nourish Bowl",
+    "category": "Hormonal Balance",
+    "description": "Balanced meal rich in fibre and plant nutrients.",
+    "prep_time": 15,
+    "cook_time": 35,
+    "servings": 4,
+    "ingredients": [
+      "2 beetroot",
+      "1 cup quinoa",
+      "1 avocado",
+      "Rocket leaves",
+      "Olive oil",
+      "Lemon juice"
+    ],
+    "instructions": [
+      "Roast beetroot until tender.",
+      "Cook quinoa.",
+      "Assemble ingredients in bowls.",
+      "Dress with olive oil and lemon."
+    ]
+  },
+  {
+    "id": 63,
+    "title": "Avocado Egg & Pumpkin Seed Breakfast Toast",
+    "category": "Skin & Hair",
+    "description": "Healthy fats and zinc support skin and hair health.",
+    "prep_time": 10,
+    "cook_time": 8,
+    "servings": 2,
+    "ingredients": [
+      "2 slices wholegrain bread",
+      "1 avocado",
+      "2 eggs",
+      "2 tbsp pumpkin seeds",
+      "Black pepper"
+    ],
+    "instructions": [
+      "Toast bread.",
+      "Cook eggs to preference.",
+      "Mash avocado onto toast.",
+      "Top with eggs and seeds."
+    ]
+  },
+  {
+    "id": 64,
+    "title": "Chamomile Pear Crumble",
+    "category": "Stress Relief",
+    "description": "Warm dessert inspired by calming herbal tea.",
+    "prep_time": 20,
+    "cook_time": 35,
+    "servings": 6,
+    "ingredients": [
+      "4 pears",
+      "1 cup oats",
+      "2 tbsp honey",
+      "1 chamomile tea bag",
+      "2 tbsp butter"
+    ],
+    "instructions": [
+      "Slice pears into baking dish.",
+      "Infuse tea and drizzle over pears.",
+      "Combine oats, butter and honey.",
+      "Bake until golden."
+    ]
+  },
+  {
+    "id": 65,
+    "title": "Mackerel & Sweet Potato Winter Tray Bake",
+    "category": "Perimenopause",
+    "description": "Omega-3 rich meal supporting overall wellbeing.",
+    "prep_time": 15,
+    "cook_time": 40,
+    "servings": 4,
+    "ingredients": [
+      "4 mackerel fillets",
+      "2 sweet potatoes",
+      "1 red onion",
+      "Olive oil",
+      "Rosemary"
+    ],
+    "instructions": [
+      "Slice vegetables.",
+      "Arrange on tray.",
+      "Roast 25 minutes.",
+      "Add fish and cook 15 minutes more."
+    ]
+  },
+  {
+    "id": 66,
+    "title": "Soy & Sesame Vegetable Stir Fry",
+    "category": "Menopause",
+    "description": "Plant-based meal containing natural phytoestrogens.",
+    "prep_time": 15,
+    "cook_time": 15,
+    "servings": 4,
+    "ingredients": [
+      "Broccoli florets",
+      "Carrot strips",
+      "Snow peas",
+      "2 tbsp soy sauce",
+      "1 tbsp sesame seeds",
+      "Tofu cubes"
+    ],
+    "instructions": [
+      "Stir fry vegetables.",
+      "Add tofu and soy sauce.",
+      "Cook until heated through.",
+      "Sprinkle with sesame seeds."
+    ]
+  },
+  {
+    "id": 67,
+    "title": "Garlic Chicken & Barley Winter Pot",
+    "category": "Wellbeing",
+    "description": "Hearty one-pot meal for cold evenings.",
+    "prep_time": 15,
+    "cook_time": 60,
+    "servings": 6,
+    "ingredients": [
+      "500g chicken thighs",
+      "1 cup pearl barley",
+      "1 onion",
+      "2 carrots",
+      "4 cups chicken stock"
+    ],
+    "instructions": [
+      "Brown chicken.",
+      "Add vegetables.",
+      "Add barley and stock.",
+      "Simmer until barley is tender."
+    ]
+  },
+  {
+    "id": 68,
+    "title": "Lemon Herb Turkey Meatballs",
+    "category": "Weight Loss",
+    "description": "Lean protein meal packed with flavour.",
+    "prep_time": 20,
+    "cook_time": 25,
+    "servings": 4,
+    "ingredients": [
+      "500g turkey mince",
+      "1 egg",
+      "Parsley",
+      "Lemon zest",
+      "Garlic"
+    ],
+    "instructions": [
+      "Combine ingredients.",
+      "Form meatballs.",
+      "Bake until cooked through.",
+      "Serve with vegetables."
+    ]
+  },
+  {
+    "id": 69,
+    "title": "Banana Walnut Mood Muffins",
+    "category": "Recovery & Depression Support",
+    "description": "Wholesome snack rich in fibre and healthy fats.",
+    "prep_time": 15,
+    "cook_time": 22,
+    "servings": 12,
+    "ingredients": [
+      "2 ripe bananas",
+      "2 eggs",
+      "1 cup oat flour",
+      "1/2 cup walnuts",
+      "1 tsp cinnamon"
+    ],
+    "instructions": [
+      "Mash bananas.",
+      "Mix all ingredients.",
+      "Fill muffin tray.",
+      "Bake until golden."
+    ]
+  },
+  {
+    "id": 70,
+    "title": "Turkey & Vegetable Recovery Soup",
+    "category": "Recovery & Depression Support",
+    "description": "Protein-rich soup with comforting winter vegetables.",
+    "prep_time": 15,
+    "cook_time": 50,
+    "servings": 6,
+    "ingredients": [
+      "400g turkey breast",
+      "2 carrots",
+      "2 celery stalks",
+      "1 onion",
+      "1 litre stock"
+    ],
+    "instructions": [
+      "Cook turkey in stock.",
+      "Add vegetables.",
+      "Simmer until tender.",
+      "Shred turkey and serve."
+    ]
+  }
+]

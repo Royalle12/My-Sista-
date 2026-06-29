@@ -1,0 +1,60 @@
+# Dependencies
+node_modules/
+dist/
+build/
+
+# Environment
+.env.local
+.env.*.local
+.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Design artifacts
+stitch_my_sista_wellness_app/
+*.zip
+
+# Stray project artifacts
+.expo/
+Ai/
+MT5/
+my-sista/
+my-sista-mobile/
+my-sista-sale-preparation/
+Orders/
+players/
+*.py
+*.pyc
+__pycache__/
+*.bat
+*.cmd
+
+# Backup files
+_package.json.backup
+
+# Stray files in project root
+API KEYS.txt
+Google Meet.lnk
+Malawi.txt
+MetaTrader 5.lnk
+New Text Document.txt
+PROJECT_STATUS.md
+Profile 1 - Edge.lnk
+desktop.ini
+files.zip
+omega-research-*.json
+
+# Logs
+*.log
+npm-debug.log*
+
+# Cache
+.cache/
