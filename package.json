@@ -14,7 +14,6 @@
     "@fontsource/dm-sans": "^5.0.0",
     "@fontsource/playfair-display": "^5.0.0",
     "@supabase/supabase-js": "^2.45.0",
-    "canvas": "^3.2.3",
     "date-fns": "^3.6.0",
     "lucide-react": "0.400.0",
     "posthog-js": "^1.143.0",
