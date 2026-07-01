@@ -7,12 +7,12 @@
 
     <!-- SEO -->
     <title>My Sista — Your Personal Wellness Companion</title>
-    <meta name="description" content="My Sista is your personal wellness companion. Personalised content, daily check-ins, and community — built for women who are doing the work." />
+    <meta name="description" content="my sista is your personal wellness companion. Personalised content, daily check-ins, and community — built for women who are doing the work." />
     <meta name="keywords" content="wellness, women, health, mental health, nutrition, fitness, South Africa" />
-    <meta name="author" content="My Sista" />
+    <meta name="author" content="my sista" />
 
     <!-- PWA -->
-    <meta name="theme-color" content="#6B3FA0" />
+    <meta name="theme-color" content="#1a0a2e />
     <link rel="manifest" href="/manifest.json" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -38,5 +38,8 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+ <script>
+    if ('serviceWorker' in navigator) { window.addEventListener('load', () => { navigator.serviceWorker.register('/sw.js', { scope: '/' }).catch(() => {}); }); }
+  </script> 
   </body>
 </html>
