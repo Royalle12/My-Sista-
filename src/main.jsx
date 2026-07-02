@@ -11,7 +11,7 @@ import './index.css';
 const initAuth = async () => {
   const { setUser, setProfile, setInitialized, logout } = useAuthStore.getState();
 
-  const timeout = new Promise((_, reject) =>
+  const timeout = new Promise(( reject)_, =>
     setTimeout(() => {
       setInitialized();
       reject(new Error('Supabase timeout'));
@@ -34,14 +34,12 @@ const initAuth = async () => {
       } catch (err) {
         console.warn('[MySista] Profile fetch failed:', err.message);
       }
-      } else {
+    } else {
       logout();
     }
   } catch (err) {
     console.warn('[MySista] Auth init failed:', err.message);
     logout();
-  }
-
   }
 };
 
@@ -71,9 +69,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         position="top-center"
         toastOptions={{
           style: {
-            background: '#1a0a2e',
+            background: '#1aa2e',
             color: '#fff',
-            border: '1px solid #6B3FA0',
+            border: '1px solid #6B3FA00',
           },
         }}
       />
