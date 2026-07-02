@@ -7,7 +7,7 @@ self.addEventListener('install', (event) => {
 });
 
 self.addEventListener('activate', (event) => {
-  event.waitUntil(caches.keys().then((names) => Promise.all(names.filter(n n !== CACHE_NAME =>).map(n => caches.delete(n)))));
+  event.waitUntil(caches.keys().then((names) => Promise.all(names.filter(n => n !== CACHE_NAME).map(n => caches.delete(n)))));
   self.clients.claim();
 });
 
@@ -20,5 +20,5 @@ self.addEventListener('fetch', (event) => {
     event.respondWith(caches.match(request).then((cached) => cached || fetch(request).then((response) => { const clone = response.clone(); caches.open(CACHE_NAME).then((cache) => cache.put(request, clone)); return response; })));
     return;
   }
-  event.respondWith(fetch(request).then((response) => { const clone = response.clone(); caches.open(CACHE_NAME).then((cache) => cache.put(request, clone)); return response; }).catch(() => caches.match(request)));
+  event.respondWith(fetch(request).then((response) => { const clone = response.clone(); caches.open(CACHE_NAME).then(() => cache.put(requestcache, clone)); return response; }).catch(() => caches.match(request)));
 });
