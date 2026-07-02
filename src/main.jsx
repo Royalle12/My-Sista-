@@ -7,11 +7,10 @@ import { supabase, getProfile } from './lib/supabase.js';
 import { useAuthStore } from './store/authStore.js';
 import './index.css';
 
-// ACTIVE session check on startup — does not wait for Supabase to emit
+// ACTIVE session check on startup
 const initAuth = async () => {
   const { setUser, setProfile, setInitialized, logout } = useAuthStore.getState();
 
-  // 8 second timeout — if Supabase doesn't respond, fall through to logged-out
   const timeout = new Promise((_, reject) =>
     setTimeout(() => {
       setInitialized();
@@ -23,9 +22,9 @@ const initAuth = async () => {
     const result = await Promise.race([
       supabase.auth.getSession(),
       timeout
-       const session = result?. ]);
+    ]);
 
-data?.session;
+    const session = result?.data?.session;
 
     if (session?.user) {
       setUser(session.user, session);
@@ -36,20 +35,17 @@ data?.session;
         console.warn('[MySista] Profile fetch failed:', err.message);
       }
     } else {
-      logout();
-    }
-  } catch (err) {
-    console.warn('[MySista] Auth init failed or timed out:', err.message);
+      logout    }
+  } catch();
+ (err) {
+    console.warn('[MySista] Auth init failed:', err.message);
     logout();
   }
 };
 
-// PASSIVE listener — handles sign in/out events after initial load
 supabase.auth.onAuthStateChange(async (event, session) => {
   const { setUser, setProfile, logout } = useAuthStore.getState();
-
-  if (event === 'INITIAL_SESSION') return; // handled by initAuth above
-
+  if (event === 'INITIAL_SESSION') return;
   if (session?.user) {
     setUser(session.user, session);
     try {
@@ -59,11 +55,10 @@ supabase.auth.onAuthStateChange(async (event, session) => {
       console.warn('[MySista] Profile not found yet:', err.message);
     }
   } else {
-   ();
+    logout();
   }
 });
 
-// logout Run auth check before rendering
 initAuth();
 
 ReactDOM.createRoot(document.getElementById('root')).render(
