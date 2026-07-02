@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
-import { Toaster } from 'react-hot-toast';
+import { Toaster } from 'sonner';
 import App from './App.jsx';
 import { supabase, getProfile } from './lib/supabase.js';
 import { useAuthStore } from './store/authStore.js';
