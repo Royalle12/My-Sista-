@@ -34,12 +34,14 @@ const initAuth = async () => {
       } catch (err) {
         console.warn('[MySista] Profile fetch failed:', err.message);
       }
-    } else {
-      logout    }
-  } catch();
- (err) {
+      } else {
+      logout();
+    }
+  } catch (err) {
     console.warn('[MySista] Auth init failed:', err.message);
     logout();
+  }
+
   }
 };
 
