@@ -9,20 +9,23 @@ import './index.css';
 
 // ACTIVE session check on startup — does not wait for Supabase to emit
 const initAuth = async () => {
-  const { setUser, setProfile, logout } = useAuthStore.getState();
+  const { setUser, setProfile, setInitialized, logout } = useAuthStore.getState();
 
   // 8 second timeout — if Supabase doesn't respond, fall through to logged-out
   const timeout = new Promise((_, reject) =>
-    setTimeout(() => reject(new Error('Supabase timeout')), 8000)
+    setTimeout(() => {
+      setInitialized();
+      reject(new Error('Supabase timeout'));
+    }, 8000)
   );
 
   try {
     const result = await Promise.race([
       supabase.auth.getSession(),
       timeout
-    ]);
+       const session = result?. ]);
 
-    const session = result?.data?.session;
+data?.session;
 
     if (session?.user) {
       setUser(session.user, session);
@@ -56,11 +59,11 @@ supabase.auth.onAuthStateChange(async (event, session) => {
       console.warn('[MySista] Profile not found yet:', err.message);
     }
   } else {
-    logout();
+   ();
   }
 });
 
-// Run auth check before rendering
+// logout Run auth check before rendering
 initAuth();
 
 ReactDOM.createRoot(document.getElementById('root')).render(
